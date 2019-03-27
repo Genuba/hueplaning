@@ -16,7 +16,7 @@
 
 		require_once 'view/footer.php';
 	}else{
-		header('Location: index.php?page=usuario&funcion=login&step=2');
+		header('Location: index.php?page=usuario&funcion=listar&step=1');
 	}
 
  ?>
