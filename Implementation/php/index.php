@@ -2,7 +2,7 @@
 	//error_reporting(E_ALL ^ E_NOTICE);
 	session_start();
 
-	if(!empty($_SESSION["id"])||$_GET["funcion"] == "login"){
+	if($_GET["funcion"] == "listar"){
 		require_once 'controller/ViewController.php';
 		require_once 'view/header.php';
 
