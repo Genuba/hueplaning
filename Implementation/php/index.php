@@ -1,8 +1,7 @@
 <?php 
-	//error_reporting(E_ALL ^ E_NOTICE);
+	error_reporting(E_ALL ^ E_NOTICE);
 	session_start();
-
-	if($_GET["funcion"] == "listar"){
+	if(!empty($_SESSION["id"])||$_GET["funcion"] == "login"){
 		require_once 'controller/ViewController.php';
 		require_once 'view/header.php';
 
@@ -16,7 +15,7 @@
 
 		require_once 'view/footer.php';
 	}else{
-		header('Location: index.php?page=usuario&funcion=listar&step=1');
+		header('Location: login.php');
 	}
 
  ?>
